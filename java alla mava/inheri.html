@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        class person{
+            constructor(name,age){
+                this.name=name
+                this.age=age
+            }
+        }
+
+        class teacher extends person{
+            constructor(name,age,subject){
+                super(name,age)
+              this.subject=subject
+            }
+            hai(){
+                let p=`${this.name}trainer at kgisl my age is${this.age}and my subject is${this.subject}`
+              let k=  document.createElement("h1")
+              k.innerHTML=p
+              document.body.appendChild(k)
+            }
+        }
+        let k=new teacher("kai",25,"javascrpit")
+
+        let te=new teacher("kailas",23,"java & python")
+        
+       te.hai()
+       k.hai()
+     
+    </script>
+</body>
+</html>

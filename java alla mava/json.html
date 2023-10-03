@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <ul id="a"></p> 
+   <script>
+    fetch("https://fakestoreapi.com/products?limit=5")
+    .then(pp=>pp.json())
+    .then(bb=>{
+            bb.map(e=>{
+            let c=document.getElementById("a")
+            let d=document.createElement("li")
+            d.innerHTML=JSON.stringify(e)
+            c.appendChild(d)
+        })
+    })
+      
+    
+   </script>
+</body>
+</html>

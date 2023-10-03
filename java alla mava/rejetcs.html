@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>enter your username</h1>
+    <input type="text" id="txt">
+    <button onclick="my()">kailas</button>
+    <script>
+        function my(){
+        let a=String(document.getElementById("txt").value)
+    
+        let te=/^[a-z]?[1-9]?[\W]+$/
+        // let result=
+        if(te.test(a)){
+            alert("valid")
+        }
+       else{
+        alert("notvalid")
+       } 
+        
+        }
+    </script>
+</body>
+</html>

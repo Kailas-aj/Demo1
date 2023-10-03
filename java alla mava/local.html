@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .kk{
+            border:1px solid black;
+            padding: 10px;
+            
+
+        }
+        .pp{
+            border:1px solid black;
+            color: rgb(255, 0, 0);
+            padding: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    
+   <label>enter your name</label> <input type="text" id="txt"><br><br>
+   <label>enter your age</label> <input type="text" id="txt1"><br><br>
+  <label>enter your number</label>  <input type="number" id="num"><br><br>
+    <button onclick="my()">click</button><br>
+    <br>
+    <table id="ta"  >
+    
+        <tr id="trr">
+                <td id="name"></td>
+                <td id="key"></td>
+        
+        </tr>
+    
+    
+        <tr>
+            <td id="number1"></td>
+            <td id="ornumber"></td>
+        </tr>
+        <tr>
+            <td id="number2"></td>
+            <td id="ornumber2"></td>
+        </tr>
+
+    </table>
+    <script>
+     
+             table1.style.display = "none";
+
+        function my(){
+            let table1=document.getElementById("ta")
+            table1.setAttribute("class","kk")
+    
+     let thh=document.getElementById("trr")
+     
+            // table1.style.display="inline"
+            let a=document.getElementById("txt").value
+            let c=document.getElementById("name")
+            c.setAttribute("class","pp")
+            let k=document.getElementById("key")
+            k.setAttribute("class","pp")
+            let b=localStorage.setItem("username",a)
+            let t=localStorage.getItem("username")
+               c.innerHTML="username"
+               k.innerHTML=t
+           let a1=Number(document.getElementById("txt1").value)
+           let b1=document.getElementById("number1")
+           b1.setAttribute("class","pp")
+           let c1=document.getElementById("ornumber")
+           c1.setAttribute("class","pp")
+           let d1=localStorage.setItem("age",a1)
+           let f1=localStorage.getItem("age")
+           b1.innerHTML="age"
+           c1.innerHTML=f1
+         let a2=document.getElementById("num").value
+         let b2=document.getElementById('number2')
+         b2.setAttribute("class","pp")
+         let c2=document.getElementById("ornumber2")
+         c2.setAttribute("class","pp")
+        let d2=localStorage.setItem("phoneNo",a2)
+        let e2=localStorage.getItem("phoneNo")
+           b2.innerHTML="phone No"
+          c2.innerHTML=e2
+             
+            
+        }
+    </script>
+
+
+</body>
+</html>

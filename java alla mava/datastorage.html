@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="txt">
+    <button onclick="my()">click</button>
+    <h1 id="head"></h1>
+    <script>
+        function my(){
+        let ttt=document.getElementById("txt").value
+        let p=localStorage.setItem('username',ttt)
+        let tk=localStorage.getItem('username')
+        let k=document.getElementById("head")
+        let tt=k.innerHTML=tk
+        }
+    </script>
+
+</body>
+</html>

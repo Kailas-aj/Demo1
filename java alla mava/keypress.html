@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="txt" >
+    <button onclick="my()">click</button>
+    <select id="sel" onchange="last()">
+      
+    </select>
+    <select id="cel" >
+
+    </select>
+    <script>
+        let b=document.getElementById("txt")
+        let r=document.getElementById("sel")
+        
+    function my(){
+        let c= Number(b.value)
+        let a=document.getElementById("sel")
+        a.innerHTML = `<option>--select value--</option>`
+        for(i=1;i<=c;i++){
+        let d=document.createElement("option")
+            d.innerHTML=i
+            a.appendChild(d)
+        }
+    }
+    function last(){
+        let b=Number(document.getElementById("sel").value)
+        let tv=document.getElementById("cel")
+        tv.innerHTML = `<option>--select value--</option>`
+        for(i=1;i<=b;i++){
+            let tt=document.createElement("option")
+            tt.innerHTML=i;
+            tv.appendChild(tt)
+        }
+    }
+
+    
+    
+
+
+   
+    </script>
+    
+</body>
+</html>

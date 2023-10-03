@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="ka">
+    <button onclick="my()">validate your number</button>
+    <input type="text" id="kaa">
+    <script>
+        function my(){
+        let hk=document.getElementById("ka").value
+        let p=/^[6-9]{1}[0-9]{9}$/g
+        if(p.test(hk)){
+            let tk=document.getElementById("kaa")
+            tk.value="number is correct"
+        }
+        else{
+            let tk=document.getElementById("kaa")
+            tk.value="not correct"
+        }
+    }
+        
+    </script>
+</body>
+</html>

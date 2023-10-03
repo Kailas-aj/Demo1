@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="txt">
+    <button onclick="my()">click</button>
+    <select id="sel" onchange="my1()">
+
+    </select>
+    <select id="cel" onchange=" my2()">
+
+    </select>
+    <select id="cell" onchange="">
+
+    </select>
+    <button onclick="my3()">to create a form</button>
+    <form id="fomm">
+
+
+
+
+
+
+
+    </form>
+
+    <script>
+        let txt = document.getElementById("txt")
+        let sel1 = document.getElementById("sel")
+        let sel2 = document.getElementById("cel")
+        let sel3 = document.getElementById("cell")
+
+        function my() {
+            let a = Number(document.getElementById("txt").value)
+            for (let i = 1; i <= a; i++) {
+                let t = document.createElement("option")
+                t.innerHTML = i
+                sel1.appendChild(t)
+            }
+            txt.value = ""
+        }
+        function my1() {
+            let a = document.getElementById("sel").value
+            for (let i = 1; i <= a; i++) {
+                let b = document.createElement("option")
+                b.innerHTML =i
+                sel2.appendChild(b)
+            }
+        }
+        function my2() {
+            let a = document.getElementById("cel").value
+            for (let i = 1; i <= a; i++) {
+                let c = document.createElement('option')
+                c.innerHTML = i
+                sel3.appendChild(c)
+            }
+        }
+        let sel4 = document.getElementById("fomm")
+
+        function my3() {
+            let a = document.getElementById("cell").value
+           
+            for (let i = 1; i <= a; i++) {
+                // let l = document.createElement('label')
+                // l.textContent = `username`
+                // sel4.appendChild(l)
+
+                // let p = document.createElement("input")
+                // p.type = "text"
+                // p.placeholder = "Enter your name"
+                // sel4.appendChild(p)
+
+                // let t = document.createElement('label')
+                // t.innerHTML = `password`
+                // sel4.appendChild(t)
+
+                // let k = document.createElement("input")
+                // k.type = "text"
+                // sel4.appendChild(k)
+                // let sel4 = document.getElementById("fomm")
+                let tk=document.createElement("form")
+                tk.innerHTML = 'username: <input type="text"/> Password: <input type="password" />'
+                document.body.appendChild(tk)
+
+
+                }
+
+
+            }
+
+        
+
+
+    </script>
+
+</body>
+
+</html>

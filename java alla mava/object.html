@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="txt">
+    <input type="text" id="txt1">
+    <input type="date" id="da">
+    <button onclick="my()"> click</button>
+    <h1 id="hhh"></h1>
+
+    <script>
+        function my() {
+            let a = document.getElementById("txt").value
+            let b = document.getElementById("txt1").value
+            let c = document.getElementById("da").value
+            let d = new Date(c)
+            let e = d.getDate()
+            let f = d.getMonth() + 1
+            let g = d.getFullYear()
+            let h = a.slice(0, 4)
+            let p = b.slice(0, 2)
+            let k = `${h}${p}${e}${f}${g}`
+            let obb = [
+                {
+                    password: k
+                }
+            ]
+
+            let ppp = obb[0].password
+            console.log(ppp)
+            let bb = localStorage.setItem("password", ppp)
+            let tt = localStorage.getItem("password")
+            let hh = document.getElementById("hhh")
+            hh.innerHTML = tt
+        }
+
+    </script>
+</body>
+
+</html>

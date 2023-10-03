@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="date" id="kh">
+    <button onclick="my()">click</button>
+    
+    <script>
+     
+        function my(){
+     let a=document.getElementById("kh").value
+     let date1=new Date(a)
+     date1.setDate(date1.getDate(a)+5)
+     console.log(date1)
+     let date2=new Date(a)
+     date2.setDate(date2.getDate(a)-5)
+     console.log(date2)
+        }
+    </script>
+</body>
+</html>

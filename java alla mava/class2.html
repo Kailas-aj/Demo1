@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class shape{
+            constructor(shape,size,sidelength){
+                   this.shape=shape 
+                   this.size=size
+                   this.sidelength=sidelength
+                  
+            }
+            caltri(){
+                let k=this.size*this.sidelength
+                let t=`${this.shape},${k}`
+                console.log(t)
+                
+            }
+        
+           
+        }
+        let triangle=new shape("triangle",3,10)
+        let square=new shape("shape",4,5)
+         triangle.caltri()
+         square.caltri()
+      
+    </script>
+</body>
+</html>

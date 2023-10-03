@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <button onclick="my()">click me</button>
+    <h1 id="head1"></h1>
+    <h1 id="head2"></h1>
+    <script>
+        function my(){
+            let aa=document.getElementById("text").value
+            let a=new Date(aa)
+            let b=a.getDate()
+            let c=a.getMonth()
+            let d=a.getFullYear()
+            let g=b-5
+            console.log(g)
+            console.log(d)
+            console.log(c)
+        }
+    </script>
+    
+</body>
+</html>
